@@ -1,3 +1,5 @@
+#https://www.youtube.com/watch?v=g_8gw2POOYE
+
 import random
 from typing import List
 
@@ -40,6 +42,7 @@ class Agent:
         reward = env.action(random.coice(actions)) #random action selection
         #add rewards together
         self.total_reward += reward
+        print("Total Rewards: {}".format(self.total_reward))
 
 if __name__ == "_main_":
     #calling the env

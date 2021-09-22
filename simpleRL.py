@@ -29,14 +29,29 @@ class Agent:
     def __init__(self) -> None:
         self.total_reward = 0.0
 
+    #consider the sample environment
     def step(self, env: SampleEnvironment):
+        #here obs is hardcoded
         current_obs = env.get_observation()
-        print(current_obs)
+        print("Observation {}".format(current_obs))
+        #getting random value form 1/0. no logic has iplemented
         actions = env.get_action()
         print(actions)
-        reward = env.action(random.coice(actions))
+        reward = env.action(random.coice(actions)) #random action selection
+        #add rewards together
         self.total_reward += reward
 
+if __name__ == "_main_"
+    #calling the env
+    env = SampleEnvironment()
+    #calling the agent
+    agent = Agent()
+    i=0
 
+    while not env.is_done():
+        i+=1
+        print("Steps {}".format(i))
+        agent.step(env)
 
+    print("Total reward got: %.4f" % agent.total_reward)
 

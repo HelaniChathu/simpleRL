@@ -20,7 +20,7 @@ class SampleEnvironment:
 
      #decrease the number of steps in each iteration
     def action(self, action: int) -> float:
-        if self.is_done();
+        if self.is_done():
             raise Exception("Game is over")
         self.steps_left -=1
         return random.random()
@@ -41,7 +41,7 @@ class Agent:
         #add rewards together
         self.total_reward += reward
 
-if __name__ == "_main_"
+if __name__ == "_main_":
     #calling the env
     env = SampleEnvironment()
     #calling the agent

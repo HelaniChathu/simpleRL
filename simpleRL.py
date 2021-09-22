@@ -28,7 +28,7 @@ class SampleEnvironment:
         return random.random()
 
 class Agent:
-    def __init__(self) -> None:
+    def __init__(self):
         self.total_reward = 0.0
 
     #consider the sample environment
@@ -39,12 +39,12 @@ class Agent:
         #getting random value form 1/0. no logic has iplemented
         actions = env.get_action()
         print(actions)
-        reward = env.action(random.coice(actions)) #random action selection
+        reward = env.action(random.choice(actions)) #random action selection
         #add rewards together
         self.total_reward += reward
         print("Total Rewards: {}".format(self.total_reward))
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     #calling the env
     env = SampleEnvironment()
     #calling the agent
@@ -52,7 +52,7 @@ if __name__ == "_main_":
     i=0
 
     while not env.is_done():
-        i+=1
+        i=i+1
         print("Steps {}".format(i))
         agent.step(env)
 

@@ -9,11 +9,11 @@ class SampleEnvironment:
         self.steps_left=20
 
     #can any no of coordinates. Info regarding the environment
-    def get_observation(self) -> List(float):
+    def get_observation(self) -> List[float]:
         return [0.0, 0.0, 0.0]
 
     #after performing the action agent will get 1 (+)/ 0 (-) as the reward
-    def get_action(self) -> List(int):
+    def get_action(self) -> List[int]:
         return [0, 1]
 
     #whenthe no of steps have completed this will give an indication

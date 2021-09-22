@@ -29,6 +29,14 @@ class Agent:
     def __init__(self) -> None:
         self.total_reward = 0.0
 
-    
+    def step(self, env: SampleEnvironment):
+        current_obs = env.get_observation()
+        print(current_obs)
+        actions = env.get_action()
+        print(actions)
+        reward = env.action(random.coice(actions))
+        self.total_reward += reward
+
+
 
 
